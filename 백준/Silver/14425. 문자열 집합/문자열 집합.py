@@ -1,7 +1,7 @@
 N,M = map(int,input().split())
-owned_string,given_string = [],[]
+owned_string,given_string = set(),[]
 for _ in range(N):
-    owned_string.append(input())
+    owned_string.add(input())
 for _ in range(M):
     given_string.append(input())
 
