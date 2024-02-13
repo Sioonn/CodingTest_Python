@@ -1,8 +1,17 @@
-N,M = map(int,input().split())
-owned_string,given_string = dict(),[]
-for _ in range(N):
-    owned_string[input()] = True
-for _ in range(M):
-    given_string.append(input())
+import sys
 
-print(len([i for i in given_string if i in owned_string]))
+input = sys.stdin.readline
+
+N, M = map(int, input().rstrip().split())
+
+S = set()
+count = 0
+
+for _ in range(N):
+  S.add(input().rstrip())
+
+for _ in range(M):
+  if input().rstrip() in S:
+    count += 1
+
+print(count)
